@@ -1,3 +1,4 @@
+
 "use strict";
 
 var fs = require("fs");
@@ -20,7 +21,7 @@ fs
     return (file.indexOf(".") !== 0) && (file !== basename) && (file.slice(-3) === ".js");
   })
   .forEach(function(file) {
-    var model = sequelize["fighter"](path.join(__dirname, file));
+    var model = sequelize["import"](path.join(__dirname, file));
     db[model.name] = model;
   });
 
