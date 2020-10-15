@@ -21,11 +21,10 @@ app.set("view engine", "handlebars");
 //get rout to render the whats in the index file in main.handlbars file also able to inject values when you res.render
 //rendering into index to show on main handlebars file
 app.get("/",(req, res) =>{
-    connection.query("select * from pfs",(err, data) =>{
-        res.render("index", {name: "Wilmer Rivera Morter"});
-        //console.table(data);
+    connection.query("select * from fighter",(err, data) =>{
+        console.table(data)
     })
-   
+    res.render("index", {name: "Wilmer Rivera Morter"});
 });
 // test rout/get rout to a web browser api page 
 app.get("/api/config",(req, res) => {
