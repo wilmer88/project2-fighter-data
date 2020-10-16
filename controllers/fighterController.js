@@ -1,13 +1,16 @@
 //api-routes.js - this file offers a set of routes for displaying and saving data to the db
 const connection = require("../config/connection.js");
+const Fighter = require("../models/fighter.js")
 
 module.exports = function(app) {
-  app.get("/api/all", function(req, res) {
-    const dbQuery = "select all from pfs";
-connection.query(dbQuery, function(err, result) {
-  if (err) throw err;
-  res.json(result);
-});
+  app.get("/api/:fighter?", function(req, res) {
+    if(req.params.characters){
+ }
+    else{
+      Fighter.find(). then(result =>{
+        res.json(result)
+      })
+    }
   });
 
   app.post("/api/new", function(req, res){

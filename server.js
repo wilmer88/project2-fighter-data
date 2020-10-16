@@ -10,22 +10,15 @@ const PORT = process.env.PORT || 8080;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+app.use(express.static("public"));
+
 //handlbars middleware sets up the express app to handle data parsing
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
-
-
-  
-
-
 //get rout to render the whats in the index file in main.handlbars file also able to inject values when you res.render
 //rendering into index to show on main handlebars file
-app.get("/",(req, res) =>{
-    connection.query("select * from fighter",(err, data) =>{
-        console.log(fighter)
-    })
-    res.render("index", {name: "Wilmer Rivera Morter"});
-});
+require()
+
 // test rout/get rout to a web browser api page 
 app.get("/api/config",(req, res) => {
     res.json({
@@ -34,7 +27,7 @@ app.get("/api/config",(req, res) => {
 });
 
 
-app.use(express.static("public"));
+
 
 app.listen(PORT,() =>{
     console.log(`server is runinin on http://localhost:${PORT}`)
