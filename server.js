@@ -15,19 +15,16 @@ app.use(express.static("public"));
 //handlbars middleware sets up the express app to handle data parsing
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
-//get rout to render the whats in the index file in main.handlbars file also able to inject values when you res.render
-//rendering into index to show on main handlebars file
-require()
 
-// test rout/get rout to a web browser api page 
-app.get("/api/config",(req, res) => {
-    res.json({
-        success:true,
-    });
+//routs
+require("./controllers/fighterController")(app);
+
+app.get("/",(req, res) =>{
+    connection.query("select * from fighter",(err, data) =>{
+        console.table(data)
+    })
+    res.render("index", {name: "Wilmer Rivera Morter"});
 });
-
-
-
 
 app.listen(PORT,() =>{
     console.log(`server is runinin on http://localhost:${PORT}`)
