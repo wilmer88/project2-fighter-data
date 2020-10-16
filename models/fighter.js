@@ -1,12 +1,12 @@
-const Sequelize = require("sequelize");
-const sequelize = require("../config/connection.js");
 
+const sequelize = require("../config/connection.js");
+const Sequelize = require("sequelize");
 const Fighter = sequelize.define("pfs", {
-    name: DataTypes.STRING,
-    age: DataTypes.STRING,
-    hight: DataTypes.STRING,
-    record: DataTypes.STRING,
-    fightIQ: DataTypes.STRING,
+    name: Sequelize.STRING,
+    age: Sequelize.STRING,
+    hight: Sequelize.STRING,
+    record: Sequelize.STRING,
+    fightIQ: Sequelize.STRING,
     stance: DataTypes.STRING,
     style: DataTypes.STRING,
     nationality: DataTypes.STRING,

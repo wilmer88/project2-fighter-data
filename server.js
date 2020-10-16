@@ -22,7 +22,7 @@ app.set("view engine", "handlebars");
 //rendering into index to show on main handlebars file
 app.get("/",(req, res) =>{
     connection.query("select * from fighter",(err, data) =>{
-        console.table(data)
+        console.log(fighter)
     })
     res.render("index", {name: "Wilmer Rivera Morter"});
 });
