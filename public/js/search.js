@@ -9,9 +9,9 @@ function searchFight(){
         url: "https://api.sportsdata.io/v3/mma/scores/json/Fighters",
         method: "GET"
     }).then(function(data){
-        let fighter = data[0]
-        let fighterName = `${fighter.FirstName} ${fighter.LastName}`
-        console.log(fighterName)
+         let fighter = data[0]
+         let fighterName = `${fighter.FirstName} ${fighter.LastName}`
+        console.log(data)
     })
 }
 search.on("click", searchFight)
