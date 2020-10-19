@@ -60,7 +60,7 @@ USER will be able to create their own profile card.
 
 Wireframes is bulma
 API is sportdata for developer api
-![screenshot](./assets/images/pic.png)
+![screenshot](./public/assets/images/pic.png)
 [this is the link to the page](https://project2-fighter-data.herokuapp.com/)
 
 
