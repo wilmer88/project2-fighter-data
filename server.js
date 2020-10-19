@@ -20,10 +20,10 @@ app.set("view engine", "handlebars");
 require("./controllers/fighterController")(app);
 
 app.get("/",(req, res) =>{
-    connection.query("select * from fighter",(err, data) =>{
-        console.table(data)
-    })
-    res.render("index", {name: "Wilmer Rivera Morter"});
+    // connection.query("select * from fighters",(err, data) =>{
+    //     console.table(data)
+    // })
+res.render("index");
 });
 
 app.listen(PORT,() =>{
