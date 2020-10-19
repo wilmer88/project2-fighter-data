@@ -23,7 +23,7 @@ Price Fighter Science aka “PFS” app has everything you need to know about yo
 WHEN user enters the page they are given options on which two fighter profile card they want to compare.
   AFTER they select the two they want to view  the page will render at the bottom of the screen  the  two player card displayed side by side for comparison
 
-When viewing fighter data  a five star system or a below average, average, and above average  score will be given to rate fighter last performance.
+When viewing fighter data. five star system, or a below average, average, or above average  score will be given to rate fighter last performance.
 
 Name:
 Age:
@@ -43,9 +43,11 @@ Chin
 Footwork
 Head movement
 Striking accurcy: 
- speed : above avrage
- power: Avrage
-Strength: avarage
+ speed : 
+ power: 
+Strength: 
+positive x factor:
+neagative x factor:
 
 
 
@@ -58,5 +60,8 @@ USER will be able to create their own profile card.
 
 Wireframes is bulma
 API is sportdata for developer api
+![screenshot](./assets/images/pic.png)
+[this is the link to the page](https://project2-fighter-data.herokuapp.com/)
+
 
  
